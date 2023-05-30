@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_2"
+    app:startDestination="@id/namaFragment">
+    <fragment
+        android:id="@+id/namaFragment"
+        android:name="com.cermat.shuffle.NamaFragment"
+        android:label="fragment_nama"
+        tools:layout="@layout/fragment_nama" >
+        <action
+            android:id="@+id/action_namaFragment_to_hasilnamaFragment"
+            app:destination="@id/hasilnamaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hasilnamaFragment"
+        android:name="com.cermat.shuffle.HasilnamaFragment"
+        android:label="fragment_hasilnama"
+        tools:layout="@layout/fragment_hasilnama" >
+        <argument android:name="hslargnm"
+            app:argType="string" />
+    </fragment>
+</navigation>

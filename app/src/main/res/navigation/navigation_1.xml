@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_1"
+    app:startDestination="@id/angkaFragment">
+
+    <fragment
+        android:id="@+id/angkaFragment"
+        android:name="com.cermat.shuffle.AngkaFragment"
+        android:label="fragment_angka"
+        tools:layout="@layout/fragment_angka" >
+        <action
+            android:id="@+id/action_angkaFragment_to_hasilangkaFragment"
+            app:destination="@id/hasilangkaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hasilangkaFragment"
+        android:name="com.cermat.shuffle.HasilangkaFragment"
+        android:label="fragment_hasilangka"
+        tools:layout="@layout/fragment_hasilangka" >
+        <argument android:name="hslarg"
+            app:argType="integer" />
+    </fragment>
+</navigation>
